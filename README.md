@@ -27,12 +27,12 @@ Use the standard "Filter" UI to filter which stories appear on the board. For ex
 #### Swimlanes
 You can optionally display swimlanes on the board (horizontal groupings). See Settings below. 
 
-## Installtion and Settings
+## Installation and Settings
 The app is installed as a Custom HTML App ([see help documentation](https://help.rallydev.com/custom-html))
 
 ![estimation settings screenshot](images/Estimation-Settings.png "Estimation Settings Screenshot")
 
-Once the app is installed, used the GEAR menu on the app panel and select "Edit App Settings". There are 3 settings you can configure. 
+Once the app is installed, used the gear menu on the app panel and select "Edit App Settings". There are 3 settings you can configure. 
 
 #### Sizes
 Enter the story-point sizes that you want to appear on the board. For example, "1,2,3,5,8".
