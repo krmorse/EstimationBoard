@@ -30,7 +30,7 @@ You can optionally display swimlanes on the board (horizontal groupings). See Se
 ## Installation and Settings
 The app is installed as a Custom HTML App ([see help documentation](https://help.rallydev.com/custom-html))
 
-![estimation settings screenshot](images/Estimation-Settings.png "Estimation Settings Screenshot")
+<img src="images/Estimation-Settings.png" height="413" width="410" alt="Estimation Settings Screenshot" />
 
 Once the app is installed, used the gear menu on the app panel and select "Edit App Settings". There are 3 settings you can configure.
 
