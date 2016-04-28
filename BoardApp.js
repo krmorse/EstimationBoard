@@ -27,7 +27,13 @@ Ext.define('EstimationBoardApp', {
                 'Defect'
             ],
             showRows: false,
-            sizes: '1,2,3,5,8'
+            sizes: Ext.JSON.encode([
+              {text: 'XS', value: 1},
+              {text: 'S', value: 2},
+              {text: 'M', value: 3},
+              {text: 'L', value: 5},
+              {text: 'XL', value: 8}
+            ])
         }
     },
 
@@ -116,7 +122,8 @@ Ext.define('EstimationBoardApp', {
             context: this.getContext(),
             cardConfig: {
                 editable: true,
-                showIconMenus: true
+                showIconMenus: true,
+                fields: ['PlanEstimate']
             },
             loadMask: true,
             plugins: [{ptype:'rallyfixedheadercardboard'}],
@@ -128,11 +135,11 @@ Ext.define('EstimationBoardApp', {
                     headerTpl: '{size}'
                 }
             },
-            columns: _.map([null].concat(this.getSetting('sizes').split(',')), function(size) {
+            columns: _.map([{text: 'No Estimate', value: null}].concat(Ext.JSON.decode(this.getSetting('sizes'))), function(size) {
                 return {
-                    value: size && parseInt(size, 10),
+                    value: size.value,
                     columnHeaderConfig: {
-                        headerData: {size: size || 'No Estimate'}
+                        headerData: {size: size.text}
                     }
                 };
             })
