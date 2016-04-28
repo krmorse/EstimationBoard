@@ -35,7 +35,7 @@ The app is installed as a Custom HTML App ([see help documentation](https://help
 Once the app is installed, used the gear menu on the app panel and select "Edit App Settings". There are 3 settings you can configure.
 
 #### Columns
-Enter the column names and corresponding plan estimates that you want to appear on the board.  The screenshot above shows the default configuration.  The + and - buttons can be used to add or remove columns.
+Enter the column names and corresponding plan estimates that you want to appear on the board.  The + and - buttons can be used to add or remove columns.
 
 #### Swim Lanes
 If you want cards grouped in horizontal lanes by some criteria, click the checkbox to turn on swimlanes. This will activate the dropdown box so that you can select the field that will be used to create the groupings. For example, you could group stories by Portfolio Item (Feature) if you had several features you were breaking down and wanted to size all of the stories for each of the features in succession.
