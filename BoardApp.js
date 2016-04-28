@@ -24,7 +24,8 @@ Ext.define('EstimationBoardApp', {
         defaultSettings: {
             types: [
                 'HierarchicalRequirement',
-                'Defect'
+                'Defect',
+                'DefectSuite'
             ],
             showRows: false,
             sizes: Ext.JSON.encode([
@@ -67,18 +68,20 @@ Ext.define('EstimationBoardApp', {
                         }
                     },
                     {
-                        ptype: 'rallygridboardcustomfiltercontrol',
-                        filterChildren: false,
-                        filterControlConfig: {
-                            margin: '3 9 3 30',
+                        ptype: 'rallygridboardinlinefiltercontrol',
+                        inlineFilterButtonConfig: {
+                            stateful: true,
+                            stateId: context.getScopedStateId('board-filters'),
                             modelNames: modelNames,
-                            stateful: true,
-                            stateId: context.getScopedStateId('board-custom-filter-button')
-                        },
-                        showOwnerFilter: true,
-                        ownerFilterControlConfig: {
-                            stateful: true,
-                            stateId: context.getScopedStateId('board-owner-filter')
+                            inlineFilterPanelConfig: {
+                                quickFilterPanelConfig: {
+                                    defaultFields: [
+                                        'ArtifactSearch',
+                                        'Owner',
+                                        'ModelType'
+                                    ]
+                                }
+                            }
                         }
                     },
                     {
@@ -86,7 +89,7 @@ Ext.define('EstimationBoardApp', {
                         headerPosition: 'left',
                         boardFieldBlackList: ['Successors', 'Predecessors', 'DisplayColor'],
                         modelNames: modelNames,
-                        boardFieldDefaults: ['PlanEstimate']
+                        boardAlwaysSelectedValues: ['PlanEstimate']
                     }
                 ],
                 context: context,
